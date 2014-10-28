@@ -6,7 +6,7 @@ description: >
   Louis Servant is an up-and-coming iOS Developer.  He has an amazing passion
   for learning new things, especially when it relates to technology.  He's worked 
   with META, MakeGamesWithUs, Firebase, and is the creator of BattleSweeper.
-baseurl: "/lservant.github.io/" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://louservant.com" # the base hostname & protocol for your site
 twitter_username: lservant
 github_username:  lservant
