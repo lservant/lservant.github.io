@@ -1,25 +1,16 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2014-10-27 19:57:04
-categories: jekyll update
+title:  "Finally Started!"
+date:   2014-11-29
+categories: blog update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+This summer, I traveled to Silicon Valley for eight weeks to develop my own iPhone Game, [BattleSweeper][bs].  While there, they taught me not only how to program in Objective-C, but also how to market myself in order to find myself swimming in moolah.  One of the lessons they taught me there was to maintain a personal website to promote myself.  I'm a web developer, after all. I should be able to show off my talent with a personal website!  
 
-Jekyll also offers powerful support for code snippets:
+Well, 2 months later, I built this baby using Jekyll and Bootstrap, all hosted on Github Pages, and I feel like such a nerd.  But at that time, it was nothing more than a HTML copy of my resume with some pretty visuals brought to you by the beautiful theme I chose.  Not really showing off MY talent there.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+So here I am, a month after that, and I've finally gotten around to tweaking with the CSS and building a blog portion to the site.  Finally, using Jekyll for what it's meant for!
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+Where do I go from here?  For now, I'm going to be adding little bells and whistles to the site to make it my own.  If you like what you see here, let me know by contacting me.  If you're interested in my services as a freelancer, shoot me an e-mail, and I'll be happy to work with you!
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+[bs]: http://mgw.us/lse

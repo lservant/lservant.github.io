@@ -2,11 +2,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{ site.title }}</title>
+	<meta description="{{ site.description }}">
+	<title>{{ site.title }}
+		{% if page.title %} - {{page.title}}{endif}</title>
 
 	<!-- Jekyll Styles -->
 	<link href="{{ site.baseurl }}css/main.css" rel="stylesheet">
-		
+
 	<!-- Bootstrap core CSS -->
 	<link href="{{ site.baseurl }}assets/css/bootstrap.css" rel="stylesheet">
 
@@ -19,7 +21,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
 	<script src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
+	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
 	<script src="assets/js/Chart.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
