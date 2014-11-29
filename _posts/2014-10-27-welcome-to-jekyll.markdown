@@ -7,7 +7,7 @@ categories: blog update
 
 This summer, I traveled to Silicon Valley for eight weeks to develop my own iPhone Game, [BattleSweeper][bs].  While there, they taught me not only how to program in Objective-C, but also how to market myself in order to find myself swimming in moolah.  One of the lessons they taught me there was to maintain a personal website to promote myself.  I'm a web developer, after all. I should be able to show off my talent with a personal website!  
 
-Well, 2 months later, I built this baby using Jekyll and Bootstrap, all hosted on Github Pages, and I feel like such a nerd.  But at that time, it was nothing more than a HTML copy of my resume with some pretty visuals brought to you by the beautiful theme I chose.  Not really showing off MY talent there.
+Well, 2 months later, I built this baby using [Jekyll][jekyll] and [Bootstrap][bootstrap], all hosted on [Github Pages][ghp], and I feel like such a nerd.  But at that time, it was nothing more than a HTML copy of my resume with some pretty visuals brought to you by the beautiful theme I chose.  Not really showing off MY talent there.
 
 So here I am, a month after that, and I've finally gotten around to tweaking with the CSS and building a blog portion to the site.  Finally, using Jekyll for what it's meant for!
 
