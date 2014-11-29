@@ -2,14 +2,9 @@
 title: "Louis Servant"
 name: "Louis Servant"
 email: asklouservant@gmail.com
-description: > 
-  Louis Servant is an up-and-coming iOS Developer.  He has an amazing passion
-  for learning new things, especially when it relates to technology.  He's worked 
-  with META, MakeGamesWithUs, Firebase, and is the creator of BattleSweeper.
+description: >
+  Louis Servant is an eager young developer looking to help you with all of your software needs.  Here you'll find his blog, his projects, and his contact.
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://louservant.com" # the base hostname & protocol for your site
 twitter_username: lservant
 github_username:  lservant
-
-# Build settings
-markdown: kramdown
