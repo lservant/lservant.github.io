@@ -14,3 +14,6 @@ So here I am, a month after that, and I've finally gotten around to tweaking wit
 Where do I go from here?  For now, I'm going to be adding little bells and whistles to the site to make it my own.  If you like what you see here, let me know by contacting me.  If you're interested in my services as a freelancer, shoot me an e-mail, and I'll be happy to work with you!
 
 [bs]: http://mgw.us/lse
+[bootstrap]: http://getbootstrap.com
+[ghp]: https://pages.github.com
+[jekyll]: http://jekyllrb.com

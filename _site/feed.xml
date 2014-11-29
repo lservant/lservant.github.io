@@ -6,28 +6,24 @@
 </description>
     <link>http://louservant.com//</link>
     <atom:link href="http://louservant.com//feed.xml" rel="self" type="application/rss+xml" />
-<<<<<<< HEAD
-    <pubDate>Sat, 29 Nov 2014 16:37:54 -0600</pubDate>
-    <lastBuildDate>Sat, 29 Nov 2014 16:37:54 -0600</lastBuildDate>
-=======
-    <pubDate>Sat, 29 Nov 2014 16:04:56 -0600</pubDate>
-    <lastBuildDate>Sat, 29 Nov 2014 16:04:56 -0600</lastBuildDate>
->>>>>>> add-blog
+    <pubDate>Sat, 29 Nov 2014 16:59:00 -0600</pubDate>
+    <lastBuildDate>Sat, 29 Nov 2014 16:59:00 -0600</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Finally Started!</title>
-        <description>&lt;p&gt;This summer, I traveled to Silicon Valley for eight weeks to develop my own iPhone Game, BattleSweeper.  While there, they taught me not only how to program in Objective-C, but also how to market myself in order to find myself swimming in moolah.  One of the lessons they taught me there was to maintain a personal website to promote myself.  I’m a web developer, after all. I should be able to show off my talent with a personal website!  &lt;/p&gt;
+        <description>&lt;p&gt;This summer, I traveled to Silicon Valley for eight weeks to develop my own iPhone Game, &lt;a href=&quot;http://mgw.us/lse&quot;&gt;BattleSweeper&lt;/a&gt;.  While there, they taught me not only how to program in Objective-C, but also how to market myself in order to find myself swimming in moolah.  One of the lessons they taught me there was to maintain a personal website to promote myself.  I’m a web developer, after all. I should be able to show off my talent with a personal website!  &lt;/p&gt;
 
-&lt;p&gt;Well, 2 months later, I built this baby using Jekyll and Bootstrap, all hosted on Github Pages, and I feel like such a nerd.  But at that time, it was nothing more than a HTML copy of my resume with some pretty visuals brought to you by the beautiful theme I chose.  Not really showing off MY talent there.&lt;/p&gt;
+&lt;p&gt;Well, 2 months later, I built this baby using &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt;, all hosted on &lt;a href=&quot;https://pages.github.com&quot;&gt;Github Pages&lt;/a&gt;, and I feel like such a nerd.  But at that time, it was nothing more than a HTML copy of my resume with some pretty visuals brought to you by the beautiful theme I chose.  Not really showing off MY talent there.&lt;/p&gt;
 
 &lt;p&gt;So here I am, a month after that, and I’ve finally gotten around to tweaking with the CSS and building a blog portion to the site.  Finally, using Jekyll for what it’s meant for!&lt;/p&gt;
 
 &lt;p&gt;Where do I go from here?  For now, I’m going to be adding little bells and whistles to the site to make it my own.  If you like what you see here, let me know by contacting me.  If you’re interested in my services as a freelancer, shoot me an e-mail, and I’ll be happy to work with you!&lt;/p&gt;
+
 </description>
         <pubDate>Sat, 29 Nov 2014 00:00:00 -0600</pubDate>
-        <link>http://louservant.com//blog/update/2014/11/29/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://louservant.com//blog/update/2014/11/29/welcome-to-jekyll.html</guid>
+        <link>http://louservant.com//blog/update/2014/11/29/finally-started.html</link>
+        <guid isPermaLink="true">http://louservant.com//blog/update/2014/11/29/finally-started.html</guid>
         
         
         <category>blog</category>
