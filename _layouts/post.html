@@ -7,13 +7,10 @@ layout: page
   <p><sm>{{ page.date | date: "%b %-d, %Y" }}
     {% if page.author %} • {{ page.author }}
     {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</sm></p>
+    {% include post_tags.html %}
   <p>{{ content }}</p>
 </div>
 <div class="col-lg-3">
-  <p><t>Other Posts</t></p>
-  <dl>
-    {% for post in site.posts %}
-      <dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
-    {% endfor %}
-  </dl>
+  <p><h1><a href="/blog.html">Blog Home</a></h1></p>
+  {% include archive.html %}
 </div>

@@ -282,3 +282,15 @@ a:after {
 sm {
 	font-size: 12px;
 }
+
+/* Tag Cloud Styles */
+.tags {
+  list-style: none;
+  padding: 0;
+  text-align: justify;
+  font-size: 20px;
+}
+.tags li {
+  display: inline-block;
+  margin: 0 25px 25px 0;
+}

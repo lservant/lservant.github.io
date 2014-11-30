@@ -6,8 +6,8 @@
 </description>
     <link>http://louservant.com//</link>
     <atom:link href="http://louservant.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 29 Nov 2014 17:17:07 -0600</pubDate>
-    <lastBuildDate>Sat, 29 Nov 2014 17:17:07 -0600</lastBuildDate>
+    <pubDate>Sat, 29 Nov 2014 21:09:34 -0600</pubDate>
+    <lastBuildDate>Sat, 29 Nov 2014 21:09:34 -0600</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -16,19 +16,17 @@
 
 &lt;p&gt;Well, 2 months later, I built this baby using &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;http://getbootstrap.com&quot;&gt;Bootstrap&lt;/a&gt;, all hosted on &lt;a href=&quot;https://pages.github.com&quot;&gt;Github Pages&lt;/a&gt;, and I feel like such a nerd.  But at that time, it was nothing more than a HTML copy of my resume with some pretty visuals brought to you by the beautiful theme I chose.  Not really showing off MY talent there.&lt;/p&gt;
 
-&lt;p&gt;So here I am, a month after that, and I’ve finally gotten around to tweaking with the CSS and building a blog portion to the site.  Finally, using Jekyll for what it’s meant for!&lt;/p&gt;
+&lt;p&gt;So here I am, a month after that, and I’ve finally gotten around to tweaking with the CSS and building a blog to the site.  At last, using Jekyll for what it’s meant for!&lt;/p&gt;
 
-&lt;p&gt;Where do I go from here?  For now, I’m going to be adding little bells and whistles to the site to make it my own.  If you like what you see here, let me know by contacting me.  If you’re interested in my services as a freelancer, shoot me an e-mail, and I’ll be happy to work with you!&lt;/p&gt;
+&lt;p&gt;Where do I go from here?  For now, I’m going to be adding little bells and whistles to the site to make it my own.  If you like what you see here, let me know by contacting me.  If you’re interested in my services as a freelancer, shoot me an &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#097;&amp;#115;&amp;#107;&amp;#108;&amp;#111;&amp;#117;&amp;#115;&amp;#101;&amp;#114;&amp;#118;&amp;#097;&amp;#110;&amp;#116;&amp;#064;&amp;#103;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&quot;&gt;e-mail&lt;/a&gt;, and I’ll be happy to work with you!&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 29 Nov 2014 00:00:00 -0600</pubDate>
-        <link>http://louservant.com//blog/update/2014/11/29/finally-started.html</link>
-        <guid isPermaLink="true">http://louservant.com//blog/update/2014/11/29/finally-started.html</guid>
+        <link>http://louservant.com//2014/11/29/finally-started.html</link>
+        <guid isPermaLink="true">http://louservant.com//2014/11/29/finally-started.html</guid>
         
+        <category>Site</category>
         
-        <category>blog</category>
-        
-        <category>update</category>
         
       </item>
     

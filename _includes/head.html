@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta description="{{ site.description }}">
 	<title>{{ site.title }}
-		{% if layout==post %}
+		{% if page.layout == 'post' %}
 			Blog - {{page.title}}
 		{% else %}
 				{% if page.title %} - {{page.title}}{% endif %}
@@ -21,12 +21,12 @@
 
 	<link rel="stylesheet" href="{{ site.baseurl }}assets/css/font-awesome.min.css">
 
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-	<script src="assets/js/Chart.js"></script>
+	<script src="{{ site.baseurl }}assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}assets/js/smoothscroll.js"></script>
+	<script src="{{ site.baseurl }}assets/js/Chart.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
