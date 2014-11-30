@@ -4102,7 +4102,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-collapse.in {
-  overflow-y: auto;
+  /*hotfix to add nav button*/
+  overflow-y: hidden;
 }
 
 @media (min-width: 768px) {

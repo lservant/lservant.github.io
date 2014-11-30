@@ -102,7 +102,7 @@ a:after {
 
 	By default, top navigation bar uses "fixed" position
 */
-#section-topbar ul#nav {
+#section-topbar ul.nav {
 	display: inline-block;
 	position: relative;
 	margin: 0;
@@ -115,14 +115,14 @@ a:after {
 	*display: inline;
 }
 
-#section-topbar ul#nav > li {
+#section-topbar ul.nav > li {
 	display: block;
     float: left;
     padding: 0;
 }
 
 
-#section-topbar ul#nav a {
+#section-topbar ul.nav a {
   display: block;
   font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
@@ -130,18 +130,18 @@ a:after {
   border-left: 1px solid #222;
 }
 
-	#section-topbar ul#nav a:hover {
+	#section-topbar ul.nav a:hover {
 	  background: #222;
 	  text-decoration: none;
 	  border-left: 1px solid #111;
 	}
 
-	#section-topbar ul#nav .active a {
+	#section-topbar ul.nav .active a {
 		background: #44bbaa;
 		border-left: 1px solid #111;
 	}
 
-		#section-topbar ul#nav .active a:hover {
+		#section-topbar ul.nav .active a:hover {
 			background: #44bbaa;
 		}
 #section-topbar i {

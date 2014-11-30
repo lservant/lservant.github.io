@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Louis Servant</title>
-    <description>Louis Servant is an up-and-coming iOS Developer.  He has an amazing passion for learning new things, especially when it relates to technology.  He&#39;s worked  with META, MakeGamesWithUs, Firebase, and is the creator of BattleSweeper.
+    <description>Louis Servant is an eager young developer looking to help you with all of your software needs.  Here you&#39;ll find his blog, his projects, and his contact.
 </description>
     <link>http://louservant.com//</link>
     <atom:link href="http://louservant.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 29 Nov 2014 21:09:34 -0600</pubDate>
-    <lastBuildDate>Sat, 29 Nov 2014 21:09:34 -0600</lastBuildDate>
+    <pubDate>Sun, 30 Nov 2014 13:44:29 -0600</pubDate>
+    <lastBuildDate>Sun, 30 Nov 2014 13:44:29 -0600</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
