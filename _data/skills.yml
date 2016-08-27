@@ -1,0 +1,93 @@
+- key: languages
+  title: Languages
+  members:
+    - key: js
+      name: JavaScript
+      prof: 8
+
+    - key: html
+      name: HTML5
+      prof: 8
+
+    - key: css
+      name: CSS3
+      prof: 7
+
+    - key: sass
+      name: Sass
+      prof: 6
+
+    - key: less
+      name: Less.css
+      prof: 7
+
+    - key: python
+      name: Python
+      prof: 7
+
+    - key: ios
+      name: Objective-C / Swift
+      prof: 6
+
+    - key: java
+      name: Java
+      prof: 6
+
+    - key: cplusplus
+      name: C++
+      prof: 6
+
+- key: libs
+  title: Libraries
+  members:
+    - key: d3js
+      title: D3
+      desc: Data visualization
+      link: "http://d3js.org"
+      rel: js
+
+    - key: kojs
+      title: Knockout.js
+      desc: Dynamic UI
+      link: "http://knockoutjs.com"
+      rel: js
+
+    - key: jquery
+      title: JQuery
+      desc: Standard JS Shortcuts
+      link: "http://jquery.com"
+      rel: js
+
+- key: frameworks
+  title: Frameworks
+  members:
+    - key: bootstrap
+      title: Bootstrap
+      desc: Feature-filled website framework
+      link: "http://getbootstrap.com"
+      rel: html, css, js, less, sass
+
+    - key: foundation
+      title: Foundation
+      desc: Quick, simple website framework
+      link: "http://foundation.zurb.com"
+      rel: html, css, js, sass
+
+    - key: django
+      title: Django
+      desc: Full-stack web applications with built-in admin
+      link: "https://www.djangoproject.com"
+      rel: python, html
+
+    - key: cocos2d
+      title: Cocos2d
+      desc: 2D iOS game development framework
+      link: "http://python.cocos2d.org"
+      rel: python, ios
+
+- key: software
+  title: Software
+  members:
+    - Oracle
+    - SQL Server
+    - Postgres

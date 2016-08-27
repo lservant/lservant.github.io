@@ -1,0 +1,21 @@
+- key: eureka
+  title: Web Coordinator
+  company: Eureka College
+  start: 10/2012
+  end: 12/2014
+  bullets:
+    - Initiated and organized conversion of 1000+ page static website to Wordpress for usability improvements and social media integration
+    - Collaborated with multiple departments across the school for content and design
+    - Guided subordinate student worker to improve alumni newsletter experience, leading to a system that freed up development resources and is still in use today
+
+
+- key: scadaware
+  title: Support Specialist / Software Engineer
+  company: SCADAware, Inc
+  start: 01/2015
+  end: Present
+  bullets:
+    - Leveraged knockout.js and d3.js to build front end web interfaces for new production monitoring software suite
+    - Developed custom inventory management system and software licensing web applications
+    - Audited and redesigned system for tracking the support of customer installations, generating $600,000 in revenue for 2015
+    - Challenged summer intern with web development tasks, providing guidance when appropriate

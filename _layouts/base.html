@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}
+    {% if page.title %}
+    | {{ page.title }}
+    {% endif %}</title>
+    <link rel="stylesheet" href="vendor/foundation/css/foundation.min.css">
+    <link rel="stylesheet" href="vendor/foundation/css/app.css">
+  </head>
+  <body>
+    {% include topbar.html %}
+    <div class="row">
+      <div class="large-12 columns">
+        {% include top.html %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        {{ content }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <!-- {% include footer.html %} -->
+      </div>
+    </div>
+
+    <script src="vendor/foundation/js/vendor/jquery.js"></script>
+    <script src="vendor/foundation/js/vendor/what-input.js"></script>
+    <script src="vendor/foundation/js/vendor/foundation.js"></script>
+    <script src="vendor/foundation/js/app.js"></script>
+
+  </body>
+</html>
