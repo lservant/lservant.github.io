@@ -4,6 +4,8 @@ function home(){
       languages = jekyllData.skills[0].members;
 
   bar();
+  bar();
+  $( window ).resize(bar)
 
   function bar(){
     var margin = {top: 50, right: 50, bottom: 50, left: 50},
@@ -23,16 +25,11 @@ function home(){
 
     var yAxis = d3.axisLeft(y);
 
-    var svg = skills.append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    var svg = skills.select('svg');
 
-    processData(languages)
-
-    function processData(data){
-      data = data.map(adjustProficiency)
+    updateChart(languages);
+    function updateChart(data){
+      data = data.map(adjustProficiency);
       function adjustProficiency(d){
         var now = new Date(), // current timestamp
           last = d3.timeParse('%m/%Y')(d.last), // last timestamp, parsed
@@ -42,38 +39,47 @@ function home(){
 
         var timeSince = now - last,
           adjustment = months - timeSince,
-          adjustedProf = adjustment/1000/60/60/24/30;
+          adjustedProf = adjustment,
+          da = 1000*60*60*24*30;
 
-        d.adjustedProf = adjustedProf;
+        d.timeSince = timeSince/da
+        d.adjustedProf = adjustedProf/da;
 
         return d;
       }
 
       x.domain(data.sort(function(a,b){ return b.adjustedProf - a.adjustedProf; }).map(function(d) { return d.name; }));
-      y.domain([
-        d3.min(data, function(d) { return d.adjustedProf*0.9; }),
-        d3.max(data, function(d) { return d.adjustedProf*1.1; })
-      ]).nice();
+      var min = d3.min(data, function(d) { return d.adjustedProf; }),
+        max = d3.max(data, function(d) { return d.adjustedProf; });
+      y.domain([min,max]).nice();
 
-      createBarChart();
-      function createBarChart(){
+      if(svg.empty()){
+        svg = skills.append("svg")
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
         svg.append("text")
             .attr("class", "title")
-            .attr("x", x(data[0].name))
-            .attr("y", -26)
             .text("Language Proficiency, (Months Used - Months Since Last Use)");
 
         svg.append("g")
             .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis)
-          .selectAll(".tick text")
-            .call(wrap, x.bandwidth());
+            .attr("transform", "translate(0," + height + ")");
 
         svg.append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
+            .attr("class", "y axis");
       }
+
+      svg
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom);
+      svg.select('.title')
+        .attr("x", x(data[0].name))
+        .attr("y", -26);
+      svg.select('.x.axis').call(xAxis)
+        .selectAll('.tick text')
+          .call(wrap, x.bandwidth());
+      svg.select('.y.axis').call(yAxis);
 
       var bars = svg.selectAll(".bar")
           .data(data);
@@ -81,10 +87,15 @@ function home(){
       bars.enter().append("rect")
           .attr("class", "bar")
           .attr("x", function(d) { return x(d.name); })
+          .attr("y", function(d) { return y(y.domain()[0]); })
+          .attr("height", function(d) { return 0; })
           .attr("width", x.bandwidth())
-          .attr("y", function(d) { return y(d.adjustedProf); })
-          .attr("height", function(d) { return height - y(d.adjustedProf); })
-          .attr('fill', function(d) { return color(d.name); });
+      bars
+        .attr("width", x.bandwidth())
+        .attr("x", function(d) { return x(d.name); })
+        .attr("y", function(d) { return y(d.adjustedProf); })
+        .attr("height", function(d) { return height - y(d.adjustedProf); })
+        .attr('fill', function(d) { return color(d.name); });
     }
 
     function wrap(text, width) {
