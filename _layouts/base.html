@@ -1,3 +1,6 @@
+---
+---
+
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>
@@ -36,5 +39,20 @@
     <script src="vendor/foundation/js/vendor/foundation.js"></script>
     <script src="vendor/foundation/js/app.js"></script>
 
+    {% for lib in page.libs %}
+      {% if lib == 'd3' %}
+        <script src="vendor/d3/d3.min.js"></script>
+      {% else %}
+        Unrecognized Library {{ lib }}
+      {% endif %}
+    {% endfor %}
+
+    <script type="text/javascript">
+      var jekyllData = {{ site.data | jsonify}}
+    </script>
+
+    {% if page.libs %}
+      <script src="js/{{ page.layout | slugify:pretty }}/{{ page.title | slugify:pretty }}.js"></script>
+    {% endif %}
   </body>
 </html>

@@ -1,23 +1,66 @@
 ---
 layout: base
+title: Home
+libs:
+  - d3
 ---
 
 <div class="row">
-  <div class="columns small-6">
+  <div class="columns small-9">
+    <div id="skills">
+      <h3>Skills</h3>
+      <!--
+      <ul style="height: 400px; overflow:scroll;">
+        {% for group in site.data.skills %}
+          <li>
+            {{ group.title }}
+            {% if group.key == 'languages' %}
+              {% assign languages = group.members | sort: 'prof' %}
+              <ul>
+                {% for language in languages %}
+                <li>{{ language.name }}: {{ language.prof }}</li>
+                {% endfor %}
+              </ul>
+
+            {% elsif group.key == 'libs' or group.key == 'frameworks' %}
+            <dl>
+              {% for lib in group.members %}
+              <dt><a href="{{ lib.link }}">{{ lib.title }}</a></dt>
+              <dd>{{ lib.desc }}</dd>
+              {% endfor %}
+            </dl>
+
+            {% elsif group.key == 'software' %}
+            <ul>
+              {% for software in group.members %}
+              <li>{{ software }}</li>
+              {% endfor %}
+            </ul>
+
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      -->
+    </div>
+  </div>
+  <div class="columns small-12">
     <h3>Past Experience</h3>
 
-    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+    <div class="orbit" role="region" aria-label="Past Experience" data-orbit>
       <ul class="orbit-container">
         <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
         <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-        {% for job in site.data.jobs | sort: 'start' %}
+        {% assign jobs = site.data.jobs | sort: 'start' %}
+        {% for job in jobs %}
           {% if forloop.first %}
             <li class="is-active orbit-slide">
           {% else %}
             <li class="orbit-slide">
           {% endif %}
-            <div class="text-center">
-              <h4>{{ job.title }} at {{ job.company }} from {{ job.start | date: '%B %Y' }} to {{ job.end | date: '%B %Y'}}</h4>
+            <div class="success callout" style="padding-left: 3em; padding-right: 3em;">
+              <h4>{{ job.title }} <small>{{ job.company }}</small></h4>
+              <p class="text-right">{{ job.start | date: '%b %Y' }} - {{ job.end | date: '%b %Y'}}</p>
               {% for bullet in job.bullets %}
               <p>{{ bullet }}</p>
               {% endfor %}
@@ -25,52 +68,7 @@ layout: base
           </li>
         {% endfor %}
       </ul>
-      <nav class="orbit-bullets">
-        {% for job in site.data.jobs | sort: 'start' %}
-        {% if forloop.first %}
-        <button class="is-active" data-slide="{{ forloop.index }}"><span class="show-for-sr">Slide {{ forloop.index }} details.</span>
-        {% else %}
-        <button data-slide="{{ forloop.index }}"><span class="show-for-sr">Slide {{ forloop.index }} details.</span>
-        {% endif %}
-          {% if forloop.first %}
-            <span class="show-for-sr">Current Slide</span>
-          {% endif %}
-          </button>
-        {% endfor %}
-      </nav>
     </div>
-  </div>
-  <div class="columns small-6">
-    <h3>Skills</h3>
-    <ul style="height: 400px; overflow:scroll;">
-      {% for group in site.data.skills %}
-        <li>
-          {{ group.title }}
-          {% if group.key == 'languages' %}
-            <ul>
-              {% for language in group.members | sort: 'prof' %}
-              <li>{{ language.name }}: {{ language.prof }}</li>
-              {% endfor %}
-            </ul>
 
-          {% elsif group.key == 'libs' or group.key == 'frameworks' %}
-          <dl>
-            {% for lib in group.members %}
-            <dt><a href="{{ lib.link }}">{{ lib.title }}</a></dt>
-            <dd>{{ lib.desc }}</dd>
-            {% endfor %}
-          </dl>
-
-          {% elsif group.key == 'software' %}
-          <ul>
-            {% for software in group.members %}
-            <li>{{ software }}</li>
-            {% endfor %}
-          </ul>
-
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
   </div>
 </div>
