@@ -6,7 +6,7 @@ libs:
 ---
 
 <div class="row">
-  <div class="columns small-9">
+  <div class="columns small-8">
     <div id="skills">
       <h3>Skills</h3>
       <!--
@@ -44,7 +44,7 @@ libs:
       -->
     </div>
   </div>
-  <div class="columns small-12">
+  <div class="columns small-4">
     <h3>Past Experience</h3>
 
     <div class="orbit" role="region" aria-label="Past Experience" data-orbit>
@@ -58,8 +58,8 @@ libs:
           {% else %}
             <li class="orbit-slide">
           {% endif %}
-            <div class="success callout" style="padding-left: 3em; padding-right: 3em;">
-              <h4>{{ job.title }} <small>{{ job.company }}</small></h4>
+            <div style="height:450px; overflow: scroll; padding-left: 3em; padding-right: 3em;" class="primary callout">
+              <h5>{{ job.title }} <small>{{ job.company }}</small></h5>
               <p class="text-right">{{ job.start | date: '%b %Y' }} - {{ job.end | date: '%b %Y'}}</p>
               {% for bullet in job.bullets %}
               <p>{{ bullet }}</p>

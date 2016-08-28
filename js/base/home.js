@@ -6,7 +6,7 @@ function home(){
   bar();
 
   function bar(){
-    var margin = {top: 80, right: 180, bottom: 80, left: 180},
+    var margin = {top: 50, right: 50, bottom: 50, left: 50},
       width = skills.node().getBoundingClientRect().width - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
 
@@ -32,18 +32,36 @@ function home(){
     processData(languages)
 
     function processData(data){
-      x.domain(data.sort(function(a,b){ return b.prof - a.prof; }).map(function(d) { return d.name; }));
+      data = data.map(adjustProficiency)
+      function adjustProficiency(d){
+        var now = new Date(), // current timestamp
+          last = d3.timeParse('%m/%Y')(d.last), // last timestamp, parsed
+          months = new Date(70,d.months); // months parsed
+
+        if(last === null){ last = now; }
+
+        var timeSince = now - last,
+          adjustment = months - timeSince,
+          adjustedProf = adjustment/1000/60/60/24/30;
+
+        d.adjustedProf = adjustedProf;
+
+        return d;
+      }
+
+      x.domain(data.sort(function(a,b){ return b.adjustedProf - a.adjustedProf; }).map(function(d) { return d.name; }));
       y.domain([
-        d3.min(data, function(d) { return d.prof*0.9; }),
-        d3.max(data, function(d) { return d.prof*1.1; })
+        d3.min(data, function(d) { return d.adjustedProf*0.9; }),
+        d3.max(data, function(d) { return d.adjustedProf*1.1; })
       ]).nice();
 
+      createBarChart();
       function createBarChart(){
         svg.append("text")
             .attr("class", "title")
             .attr("x", x(data[0].name))
             .attr("y", -26)
-            .text("Languages");
+            .text("Language Proficiency, (Months Used - Months Since Last Use)");
 
         svg.append("g")
             .attr("class", "x axis")
@@ -57,8 +75,6 @@ function home(){
             .call(yAxis);
       }
 
-      createBarChart();
-
       var bars = svg.selectAll(".bar")
           .data(data);
 
@@ -66,8 +82,8 @@ function home(){
           .attr("class", "bar")
           .attr("x", function(d) { return x(d.name); })
           .attr("width", x.bandwidth())
-          .attr("y", function(d) { return y(d.prof); })
-          .attr("height", function(d) { return height - y(d.prof); })
+          .attr("y", function(d) { return y(d.adjustedProf); })
+          .attr("height", function(d) { return height - y(d.adjustedProf); })
           .attr('fill', function(d) { return color(d.name); });
     }
 

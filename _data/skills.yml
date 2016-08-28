@@ -1,41 +1,50 @@
 - key: languages
   title: Languages
   members:
+    # - key: unique id
+    #   name: display name
+    #   months: total months of use
+    #   last: last time used MM/YYYY or Present
+
     - key: js
       name: JavaScript
-      prof: 8
+      months: 24
 
     - key: html
       name: HTML5
-      prof: 8
+      months: 48
 
     - key: css
       name: CSS3
-      prof: 7
+      months: 48
 
     - key: sass
       name: Sass
-      prof: 6
+      months: 6
 
     - key: less
       name: Less.css
-      prof: 7
+      months: 7
+      last: 05/2016
 
     - key: python
       name: Python
-      prof: 7
+      months: 6
 
     - key: ios
       name: Objective-C / Swift
-      prof: 6
+      months: 6
+      last: 01/2016
 
     - key: java
       name: Java
-      prof: 6
+      months: 12
+      last: 05/2014
 
     - key: cplusplus
       name: C++
-      prof: 6
+      months: 24
+      last: 12/2014
 
 - key: libs
   title: Libraries
