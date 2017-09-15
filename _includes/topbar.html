@@ -1,0 +1,25 @@
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">{{ site.title }}</li>
+      {% for page in site.pages %}
+        {% if page.title %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      <li><a href="/testatistics">TeStatistics</a></li>
+      <li>
+        <a href="#">Blog</a>
+        <ul class="menu vertical">
+          {% for post in site.posts limit:5%}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+          {% assign postcount = site.posts | size %}
+          {% if postcount > 5 %}
+            <li><a href="{{ post.url }}">See more</a></li>
+          {% endif %}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
