@@ -54,9 +54,20 @@ $on-laptop:        800px;
     }
 }
 
+.job{
+    padding:.5rem;
 
+    h5{
+        // position: absolute;
+    }
 
-
+    &:nth-child(2n){
+    background: lighten($brand-color,60);
+    small{
+        color: $grey-color;
+    }
+}
+}
 .lifted{
     box-shadow: 0 0 2px 2px $grey-color-light
 }
