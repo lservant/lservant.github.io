@@ -14,7 +14,7 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #114180;
+$brand-color:      #1452a1;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -38,7 +38,12 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 
+body{
+    background-color: $brand-color;
+}
+
 .content{
+    background: white;
     max-width: 100%;
     padding: .5rem;
     position: relative;
@@ -56,17 +61,17 @@ $on-laptop:        800px;
 
 .job{
     padding:.5rem;
-
-    h5{
-        // position: absolute;
+    
+    small {
+        color: $grey-color;
     }
 
     &:nth-child(2n){
-    background: lighten($brand-color,60);
-    small{
-        color: $grey-color;
+        background: lighten($brand-color,60);
     }
-}
+    &:nth-child(2n-1){
+        background-color: #fafafa;
+    }
 }
 .lifted{
     box-shadow: 0 0 2px 2px $grey-color-light
