@@ -7,7 +7,11 @@
         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
         {% endif %}
       {% endfor %}
-      <li><a href="/testatistics">TeStatistics</a></li>
+      {% for project in site.data.projects %}
+        {% if project.name %}
+        <li><a href="{{ project.link }}">{{ project.name }}</a></li>
+        {% endif %}
+      {% endfor %}
       <li>
         <a href="#">Blog</a>
         <ul class="menu vertical">
