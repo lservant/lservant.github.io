@@ -10,6 +10,11 @@ libs:
     {% assign projects = site.data.projects %}
     {% for project in projects %}
     <h4><a href="{{ project.link }}">{{ project.name }}</a> <small>{{ project.time }}</small></h4>
+    <p>
+      Links: 
+      <a target="_blank" href="{{ project.link }}">App</a>
+      {% if project.github %} | <a target="_blank" href="{{ project.github }}">Github</a>{% endif %}
+    </p>
     <p>{{ project.description }}</p>
     <p>Features</p>
     <ul>

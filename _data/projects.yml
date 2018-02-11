@@ -1,6 +1,7 @@
 - key: testats
   name: TeStats
   link: /testatistics
+  github: https://github.com/lservant/testatistics
   time: Sep 2017
   description: A simple web app for teachers to provide statistical analysis on tests.  Just enter the number of questions on the test, and then go through your tests and report which questions were incorrect.  The app will show you how many times each question was missed.  You can export the results to a csv to analyze in excel.
   features: 
