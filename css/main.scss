@@ -51,6 +51,14 @@ body{
     &.top,&.bottom{
         background-color: $brand-color;
         color: white;
+
+        a{
+            color: $grey-color-light;
+            &:hover{
+                text-decoration: none;
+                color: white;
+            }
+        }
     }
 
     &.main {
