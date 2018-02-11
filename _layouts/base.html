@@ -7,33 +7,30 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}
-    {% if page.title %}
-    | {{ page.title }}
-    {% endif %}</title>
+    <title>{{ site.title }} {% if page.title %} | {{ page.title }} {% endif %}</title>
     <link rel="stylesheet" href="vendor/foundation/css/foundation.min.css">
     <link rel="stylesheet" href="vendor/foundation/css/app.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     {% include topbar.html %}
-    <div class="row">
+    <div class="row top content">
       <div class="large-12 columns">
         {% include top.html %}
       </div>
     </div>
 
-    <div class="row">
-      <div class="large-12 columns">
-        {{ content }}
+    <div class="main content">
+      <div class="row">
+        <div class="large-12 columns">
+          {{ content }}
+        </div>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row bottom content">
       <div class="large-12 columns">
-        <!-- {% include footer.html %} -->
-        <div style="padding-bottom: 60px">
-
-        </div>
+        {% include footer.html %}
       </div>
     </div>
 

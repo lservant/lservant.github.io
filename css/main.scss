@@ -14,7 +14,7 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #114180;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -37,3 +37,26 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
+
+.content{
+    max-width: 100%;
+    padding: .5rem;
+    position: relative;
+    
+    &.top,&.bottom{
+        background-color: $brand-color;
+        color: white;
+    }
+
+    &.main {
+        z-index: 10;
+        box-shadow: 0 0 5px 2px $grey-color-dark;
+    }
+}
+
+
+
+
+.lifted{
+    box-shadow: 0 0 2px 2px $grey-color-light
+}
