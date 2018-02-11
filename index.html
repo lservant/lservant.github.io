@@ -4,39 +4,31 @@ title: Home
 libs:
   - d3
 ---
-
 <div class="row">
-  <div class="columns small-8">
-    <div id="skills">
-      <h3>Skills</h3>
-      
-    </div>
+  <div class="columns small-12">
+    <h3>Projects</h3>
+    {% assign projects = site.data.projects %}
+    {% for project in projects %}
+    <h4><a href="{{ project.link }}">{{ project.name }}</a> <small>{{ project.time }}</small></h4>
+    <p>{{ project.description }}</p>
+    <p>Features</p>
+    <ul>
+      {% for feature in project.features %}
+      <li>{{ feature }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
   </div>
-  <div class="columns small-4">
+</div>
+<div class="row">
+  <div class="columns small-12">
     <h3>Past Experience</h3>
-
-    <div class="orbit raised" role="region" aria-label="Past Experience" data-orbit>
-      <ul class="orbit-container">
-        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-        {% assign jobs = site.data.jobs | sort: 'start' %}
-        {% for job in jobs %}
-          {% if forloop.first %}
-            <li class="is-active orbit-slide">
-          {% else %}
-            <li class="orbit-slide">
-          {% endif %}
-            <div style="height:450px; overflow: scroll; padding-left: 3em; padding-right: 3em;" class="primary callout">
-              <h5>{{ job.title }} <small>{{ job.company }}</small></h5>
-              <p class="text-right">{{ job.start | date: '%b %Y' }} - {{ job.end | date: '%b %Y'}}</p>
-              {% for bullet in job.bullets %}
-              <p>{{ bullet }}</p>
-              {% endfor %}
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-
+    {% assign jobs = site.data.jobs %}
+    {% for job in jobs %}
+      <div class="job">
+        <h5>{{ job.company }} <small>{{ job.title }}</small></h5>
+        <div class="text-right">{{ job.start | date: '%b %Y' }} - {{ job.end | date: '%b %Y'}}</div>
+      </div>
+    {% endfor %}
   </div>
 </div>
