@@ -3,68 +3,77 @@
 
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }} {% if page.title %} | {{ page.title }} {% endif %}</title>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <link rel="stylesheet" href="/vendor/foundation/css/foundation.min.css">
-    <link rel="stylesheet" href="/vendor/foundation/css/app.css">
-    <link rel="stylesheet" href="/css/main.css">
-    
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="{{ site.title }} {% if page.title %} | {{ page.title }} {% endif %}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/thumbnail.png">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <title>{{ site.title }} {% if page.title %} | {{ page.title }} {% endif %}</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="{{ site.url }}/vendor/foundation/css/foundation.min.css">
+  <link rel="stylesheet" href="{{ site.url }}/vendor/foundation/css/app.css">
+  <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+
+  {%- if jekyll.environment == "production" -%}
+  {%- comment -%} Production Only Head Tags {%- endcomment -%}
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97740609-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97740609-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'UA-97740609-1');
-    </script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  </head>
-  <body>
-    {% include topbar.html %}
-    <div class="row top content">
+    gtag('config', 'UA-97740609-1');
+  </script>
+  {%- endif -%}
+
+</head>
+
+<body>
+  <div class="row top content">
+    <div class="large-12 columns">
+      {% include top.html %}
+    </div>
+  </div>
+
+  <div class="main content">
+    <div class="row">
       <div class="large-12 columns">
-        {% include top.html %}
+        {{ content }}
       </div>
     </div>
+  </div>
 
-    <div class="main content">
-      <div class="row">
-        <div class="large-12 columns">
-          {{ content }}
-        </div>
-      </div>
+  <div class="row bottom content">
+    <div class="large-12 columns">
+      {% include footer.html %}
     </div>
+  </div>
 
-    <div class="row bottom content">
-      <div class="large-12 columns">
-        {% include footer.html %}
-      </div>
-    </div>
+  <script src="/vendor/foundation/js/vendor/jquery.js"></script>
+  <script src="/vendor/foundation/js/vendor/what-input.js"></script>
+  <script src="/vendor/foundation/js/vendor/foundation.js"></script>
+  <script src="/vendor/foundation/js/app.js"></script>
 
-    <script src="/vendor/foundation/js/vendor/jquery.js"></script>
-    <script src="/vendor/foundation/js/vendor/what-input.js"></script>
-    <script src="/vendor/foundation/js/vendor/foundation.js"></script>
-    <script src="/vendor/foundation/js/app.js"></script>
+  {% for lib in page.libs %}
+  {% if lib == 'd3' %}
+  <script src="/vendor/d3/d3.min.js"></script>
+  {% else %}
+  Unrecognized Library {{ lib }}
+  {% endif %}
+  {% endfor %}
 
-    {% for lib in page.libs %}
-      {% if lib == 'd3' %}
-        <script src="/vendor/d3/d3.min.js"></script>
-      {% else %}
-        Unrecognized Library {{ lib }}
-      {% endif %}
-    {% endfor %}
+  {% if page.libs %}
+  <script src="/js/{{ page.layout | slugify:pretty }}/{{ page.title | slugify:pretty }}.js"></script>
+  {% endif %}
+</body>
 
-    <script type="text/javascript">
-      var jekyllData = {{ site.data | jsonify}}
-    </script>
-
-    {% if page.libs %}
-      <script src="/js/{{ page.layout | slugify:pretty }}/{{ page.title | slugify:pretty }}.js"></script>
-    {% endif %}
-  </body>
 </html>
