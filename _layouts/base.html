@@ -7,13 +7,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="{{ page.description }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="{{ site.title }} {% if page.title %} | {{ page.title }} {% endif %}">
-  <meta property="og:description" content="{{ page.description }}">
-  <meta property="og:image" content="{{ site.url }}/assets/img/thumbnail.png">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <title>{{ site.title }} {% if page.title %} | {{ page.title }} {% endif %}</title>
+  <meta property="og:title" content="{{ site.title }} {% if page.title %} | {{ page.title }} {% endif %}">
+  <meta name="description" content="{%- if page.description -%}{{page.description}}{%- else -%}{{site.description}}{%- endif -%}">
+  <meta property="og:description" content="{%- if page.description -%}{{page.description}}{%- else -%}{{site.description}}{%- endif -%}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="{{ site.insecurl }}/assets/img/thumbnail.png">
+  <meta property="og:image:secure_url" content="{{ site.url }}/assets/img/thumbnail.png">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <link rel="stylesheet" href="{{ site.url }}/vendor/foundation/css/foundation.min.css">
   <link rel="stylesheet" href="{{ site.url }}/vendor/foundation/css/app.css">
@@ -21,7 +22,7 @@
 
   {%- if jekyll.environment == "production" -%}
   {%- comment -%} Production Only Head Tags {%- endcomment -%}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97740609-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
