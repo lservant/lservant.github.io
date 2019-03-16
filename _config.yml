@@ -18,7 +18,7 @@ email: asklouservant@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Louis Servant is a full-stack software engineer ready to break down your problems and solve them with thorough, elegant solutions.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://louservant.com" # the base hostname & protocol for your site
+url: "https://louservant.com" # the base hostname & protocol for your site
 twitter_username: LouisServant
 github_username:  lservant
 sass:
