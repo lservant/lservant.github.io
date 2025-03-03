@@ -5,7 +5,7 @@ title: Home
 <div class="row">
   <div class="columns small-12">
     <h3>Projects</h3>
-    {% assign projects = site.data.projects %}
+    {% assign projects = site.data.projects | sort_natural: "time" %}
     {% for project in projects %}
     <h4><a href="{{ project.link }}">{{ project.name }}</a> <small>{{ project.time }}</small></h4>
     <p>

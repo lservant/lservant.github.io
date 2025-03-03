@@ -2,9 +2,22 @@
   name: TeStats
   link: /testatistics
   github: https://github.com/lservant/testatistics
-  time: Sep 2017
+  time: 2017 Sep
   description: A simple web app for teachers to provide statistical analysis on tests.  Just enter the number of questions on the test, and then go through your tests and report which questions were incorrect.  The app will show you how many times each question was missed.  You can export the results to a csv to analyze in excel.
   features: 
     - Simple data entry, touch and keyboard friendly
     - CSV Export
     - Track the same test separately for multiple classes
+- key: supermarioclone
+  name: Super Bario Clone
+  link: https://itch.io/embed-upload/12967467?color=333333
+  github: https://github.com/lservant/super-mario-clone
+  time: 2025 Feb
+  description: | 
+    This project is the result of careful examination of the first level of the first entry of the most famous platformer of all time. 
+    
+    It emulates the design of the original, with originally created sprites, music, and sound effects. The ultimate goal of the project is to build a game in Godot that feels as close to the original as possible within a month of development.
+  features: 
+    - Walk, run, and jump as Bario through a copy of level 1-1
+    - Stomp on enemies to get points, grow up with power orbs, and find secrets ducking into pipes
+    - Take down the flag of the evil empire and try to get the highest score
